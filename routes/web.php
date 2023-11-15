@@ -85,7 +85,7 @@ Route::get('amazon/cart/json/showing',[CartController::class,'showing' ]);
 Route::post('amazon/cart/order/orders',[BuyController::class,'orders'])->name('order1');
 Route::get('amazon/cart/order',[BuyController::class,'index'])->name('orders');
 Route::post('amazon/cart/order/buy',[BuyController::class,'oneproduct']);
-// Route::get('amazon/cart/json/showing',[CartController::class,'showing' ]);
+Route::get('amazon/cart/buy/show',[BuyController::class,'buyshow' ])->name('buyshow');
 
 
 
