@@ -67,7 +67,7 @@ class BuyController extends Controller
         }
 
         Cart::where("user_id",auth()->user()->id)->delete();
-        return redirect()->route('amazon');
+        return redirect()->route('buyshow');
         
 
        
@@ -90,5 +90,35 @@ class BuyController extends Controller
        $cart=Buy::where('product_id', $request->product_id)->first();
       
            return Response::json($cart);
+    }
+
+
+
+
+    public function buyshow(){
+      $category=Category::all();
+      $products= Products::all();
+      
+     
+      if(auth()->user()){
+        $cart1=Cart::where("user_id",auth()->user()->id)->count();
+        $cart2=Buy::join('amz_products','amz_products.id', '=','amz_buys.product_id')
+        ->select('amz_products.product_title','amz_products.product_name','amz_products.product_image','amz_products.product_price','amz_products.product_priceoriginal','amz_buys.product_qty','amz_products.id','amz_buys.product_id')->where("user_id",auth()->user()->id)->paginate(2);
+      }
+      else{
+        $cart1=Cart::count();
+
+        $cart2=Cart::join('amz_products','amz_products.id', '=','amz_buys.product_id')
+        ->select('amz_products.product_title','amz_products.product_name','amz_products.product_image','amz_products.product_price','amz_products.product_priceoriginal','amz_buys.product_qty','amz_products.id','amz_buys.product_id')->paginate(2);
+      }
+
+      return view('amazon.cart.buywelcome',[
+        'category'=>$category,
+        "products"=> $products,
+        "user"=>auth()->user(),
+        'cart'=>$cart2,
+        'cart2'=>$cart1
+        
+      ]);
     }
 }
