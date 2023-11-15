@@ -1,0 +1,117 @@
+// mediquery
+@media screen and (max-width:1124px) {
+  .menu1 .border1 {
+    padding: 0 !important;
+  }
+  .navabar24 {
+    display: none !important;
+
+  }
+}
+
+@media screen and (max-width:900px) {
+  .hero {
+    z-index: 1;
+  }
+
+  .gallery-four-image {
+    grid-template-columns: repeat(2, 125px);
+  }
+
+  .shopping-category {
+
+    .row1 {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)) !important;
+      grid-gap: 20px !important;
+
+      .col1:nth-child(3) {
+        display: none !important;
+      }
+
+      .col1:nth-child(1) {
+        min-height: 180px !important;
+        margin-top: 353px !important;
+        background-color: #fff !important;
+        padding: 10px !important;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .navabarup {
+    display: block !important;
+  }
+
+  .drop {
+    form {
+
+      select {
+        display: none;
+      }
+
+
+
+    }
+  }
+
+  .navabar23 {
+    display: none !important;
+
+  }
+
+  .navbarup {
+    display: none;
+
+    i {
+      font-size: 24px !important;
+
+      span {
+        position: absolute;
+        color: orange !important;
+        bottom: 25px;
+        right: 10%;
+        font-size: 15px !important;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width:400px) {
+  .gallery-four-image {
+    grid-template-columns: repeat(2, 165px);
+  }
+
+  .shopping-category {
+    .row1 {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)) !important;
+      grid-gap: 20px !important;
+
+
+      .col1 {
+        min-height: 180px !important;
+        // margin-top: 353px !important;
+        background-color: #fff !important;
+        // padding: 10px !important;
+        cursor: pointer;
+
+        &:nth-child(3) {
+          display: none !important;
+        }
+      }
+    }
+
+    .heelo {
+      padding: 0 !important;
+
+    }
+
+    .shopping-category {
+
+      padding: 0 4% !important;
+
+    }
+  }
+}

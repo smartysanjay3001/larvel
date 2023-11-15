@@ -1,0 +1,125 @@
+@import'variable';
+// navbar
+.navabarup{
+    display: none !important;
+
+  
+}
+  
+.menu1{
+    position: sticky !important;
+    top: 0;
+    z-index: 888 !important;
+    background-color:$amazon-nav !important;
+    padding: 6px 10px !important;
+  
+    .container-fluid{
+        .navbar-brand{
+            img{
+                height:40px;
+            }
+        }
+
+        .drop{
+            form{
+                select{
+                    // width: 100px !important;
+                    padding: 10px;
+            
+                }
+
+                .dropdown{
+                    background-color: #e6e6e6;
+
+                }
+                .bg-amz{
+                    background-color: #febd69;
+                }
+
+              
+
+            }
+        }
+
+       
+            .para{
+                   font-size: 13px;
+            }
+        .fontw{
+            font-weight: 500;
+        }
+
+        .dropdown{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         
+            .ff{
+                margin-right: 350px;
+                height: 120px;
+               min-width: 300px;
+             
+               li{
+                
+                &:nth-child(2){
+                   
+
+                    a{
+                        margin: 1% !important;
+                        color: blue;
+    
+                    }
+
+                } 
+               }
+            }
+        }
+    }
+    .border1{
+        padding: 7px;
+        border: 1px solid transparent !important;
+
+    }
+    .border1:hover{
+        border: 1px solid white !important;
+        
+    
+    }
+   
+}
+.fa-cart-shopping{
+    font-size: 30px !important;
+    position: relative;
+}
+.navo{
+    position: absolute;
+    color: orange !important;
+    bottom: 30px;
+    left: 50%;
+}
+
+
+.nav2{
+    background-color:$amazon-nav2 !important;
+   ul {
+li{
+    list-style: none;
+    padding: 4px;
+    a{
+        text-decoration: none;
+        color: white;
+        font-weight: 400;
+    }
+    &:hover{
+        border: 1px solid white;
+    }
+}
+    }
+}
+
+.dropdown-menu[data-bs-popper]{
+    left: -50px !important;
+}
+
+// media query
+

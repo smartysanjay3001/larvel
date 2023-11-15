@@ -1,0 +1,103 @@
+<div class="container-fluid bd">
+    <div class="container p-3">
+        <h1>welcome <span>MJ</span></h1>
+    </div>
+
+<div class="container  bgf">
+    <button class="btn " ng-click="Show()">Show</button>
+    <button  class="btn " ng-click="Bevarage()">Bevarage</button>
+</div>
+
+
+<!-- movie list -->
+<div class=" pdff w-100" ng-show="movielist1" >
+    
+    <table class="w-100  p-3" >
+        <tr class="text-center  " >
+            <th><h3>Movies</h3></th>
+            <th ><h3>Time</h3></th>
+            <th><h3>Tickets Available</h3></th>
+        </tr>
+
+        <tr class="text-center" ng-repeat="x in movie" ng-click="booking(x)">
+            <td ><h5> {{x.movie}}</h5></td>
+            <td class=""><h5> {{x.time}}</h5></td>
+            <td > <h5>{{x.tickets}}</h5></td>
+        </tr>
+    </table>
+</div>
+
+<!-- movie list end -->
+
+<!-- package list -->
+
+<div class="pdff w-100" ng-show="packagelist1"  >
+
+    <table class="w-100" >
+        <tr class="text-center p-3" >
+            <th><h3>Items</h3></th>
+            <th class=""><h3>Rate</h3></th>
+            <th><h3>Quantity</h3></th>
+            <th><h3>Quantity</h3></th>
+        </tr>
+
+        <tr class=" text-center p-3" ng-repeat="x in package" >
+            <td ><h5> {{x.drink}}</h5></td>
+            <td ><h5> {{x.rate}}</h5></td>
+            <td ><input type="number" ng-model="x.num" ng-click="num1()"></td>
+            <td  >{{x.num*x.rate}}</td>
+           
+       
+        </tr>
+        <tr>
+            <td> <td>          <button ng-click="select()" class="btn btn-warning fff">select</button></td>
+        </td>
+        </tr>
+
+        <tr>
+         <td> <h3>Bevarage Total:{{num2}}</h3></td>
+        </tr>
+      
+
+    </table>
+
+   
+</div>
+<!-- package list end -->
+
+
+<!-- movie ticket -->
+  
+<div class="pdff w-100 mt-3" ng-show="select1">
+    
+    <table class="w-100">
+        <tr>
+            <td><td><h3 class="text-center text-uppercase">Select Number Of Tickets <span class="text-danger text-uppercase"> {{gg}}</span></h3></td></td>
+        </tr>
+        <tr class="text-center">
+            
+            <td><h3>{{ticketrate}}</h3></td>
+            <td><h3>x</h3></td>
+            <td><input type="number" ng-model="quantityticket" ng-click="add1()" ng-disabled="dis"></td>
+            <td><h3>{{amt}}</h3></td>
+        </tr>
+
+ 
+         <tr class="d-flex flex-column  align-items-end">
+             <td><h2 class="text-danger text-center" ng-show="error">Available Tickets Level Exited</h2></td>
+           <td class=""> <h3>Ticket Amount : {{amt}} RS</h3></td>
+           <td class=""> <h3>Bevarage Amount : {{num2}} RS</h3></td>
+           <td class=""> <h3>Bevarage Amount : {{amt+num2}} RS</h3></td>
+         </tr>
+        <tr class="pdff2">
+            <td> <button type="submit" class="btn fbb btn-primary  " ng-click="rooting()">Pay</button></td>
+        </tr>
+   
+    </table>
+</div>
+
+
+
+
+
+</div>

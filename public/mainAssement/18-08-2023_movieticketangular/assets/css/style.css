@@ -1,0 +1,98 @@
+*{
+    font-family: 'Lobster', cursive;
+}
+
+
+.bff{
+    min-height: 100vh;
+    background:  linear-gradient(to right, rgba(255,0,0,0.2), rgba(255,0,0,0.7));
+    padding: 40px;
+}
+.bgf{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.bgf button:nth-child(1){
+    padding: 5px 40px;
+    font-size: 19px;
+    color:dark;
+    background-color:rgba(128, 255, 0, 0.781);
+}
+
+.bgf button:nth-child(2){
+    padding: 5px 40px;
+    font-size: 19px;
+    color:white;
+    background-color:mediumvioletred;
+}
+
+.bgf2{
+    background:linear-gradient(to right,rgba(255, 255, 0,0.8),rgba(165, 42, 42, 0.757)
+    );
+    width: 38%;
+    padding: 40px 80px;
+    border-radius: 18px;
+    box-shadow:7px 8px 10px gray, 
+    -7px -6px 10px rgba(255, 255, 255, 0.617);
+}
+.bff2{
+    background-color:rgb(123, 240, 106);
+    padding:5px 40px;
+    font-size: 20px;
+    margin-left:40%;
+    margin-top: 10px;
+}
+
+.bff3{
+    background-color:rgb(141, 37, 17);
+    color: white;
+    padding:5px 40px;
+    font-size: 20px;
+    margin-left:40%;
+    margin-top: 10px;
+}
+.bd{
+    color: dark;
+    min-height: 100vh;
+    background:linear-gradient(to right,rgba(94, 255, 0, 0.297),rgba(25, 233, 122, 0.564)
+    );
+}
+.pdff table {
+ 
+    background:linear-gradient(135deg,rgba(19, 101, 216, 0.658) 50%,rgba(233, 202, 25, 0.63) 50%
+    );
+    border-radius: 19px;
+   
+  
+}
+
+
+   .pdff table tr th{
+    color: white;  
+
+  }
+
+   .pdff table tr td{
+         padding: 40px;
+         
+   }
+   input{
+    border-radius: 10px;
+    padding: 4px 10px;
+   }
+
+.pdff2 button{
+    padding: 4px 90px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 190%;
+}
+   .fff{
+    padding: 5px 70px;
+    margin-left: 50%;
+    background-color: mediumspringgreen;
+   }
+

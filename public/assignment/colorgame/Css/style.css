@@ -1,0 +1,52 @@
+
+body{
+    background-color: #232323;
+    color: white;
+}
+.square{
+    width: 30%;
+    background-color: aqua;
+    padding-bottom: 30%;
+    float: left;
+    margin: 1.66%;
+    border-radius: 20px;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+}
+.container{
+    width: 30%;
+    margin: 20px auto;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+#stripe{
+    background-color: white;
+    height: 30px;
+    text-align: center;
+    color: black;
+}
+.hardbtn{
+    background-color: steelblue;
+    color: white;
+}
+button{
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: steelblue;
+    letter-spacing: 2px;
+    font-size: inherit;
+}
+button:hover{
+    background-color: steelblue;
+    color: whitesmoke;
+}
+#message{
+    display: inline-block;
+    width: 20%;
+}

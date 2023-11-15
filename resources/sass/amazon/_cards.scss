@@ -1,0 +1,116 @@
+.hero{
+    z-index: -2;
+}
+
+
+
+.shopping-category {
+    margin-top: -340px !important;
+    margin-bottom: 20px !important;
+    top: 240px !important;
+    left: 0 !important;
+    padding: 0 2% !important;
+    width: 100% !important;
+ 
+
+  
+  
+  .row1 {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr)) !important;
+    grid-gap: 20px !important;
+ 
+  
+  .col1 {
+    min-height: 420px !important;
+    background-color: #fff !important;
+    padding: 20px !important;
+    cursor: pointer;
+  }
+}
+  .col1 h2 {
+    font-size: 1.3125rem !important;
+  }
+  
+  .col1 > p {
+    margin-top: 30px !important;
+  }
+  
+  .col1 > p a {
+    font-size: 0.8125rem !important;
+    color: #007185 !important;
+    text-decoration: none !important;
+  }
+  
+  .gallery-four-image {
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)) !important;
+    grid-gap: 20px !important;
+    margin: 15px 0 !important;
+    
+  }
+  
+  .gallery-four-image div img {
+    width: 100% !important;
+    height: 116px !important ;
+    object-fit: cover !important;
+  }
+ 
+  
+  .gallery-four-image div p {
+    font-size: 0.75rem !important;
+    color: #0f1111 !important;
+  }
+  
+  .gallery-single-image {
+    margin: 15px 0 !important;
+    width: 100% !important;
+  }
+  
+  .gallery-single-image img {
+    width: 100% !important;
+    height: 100% !important;
+   
+    object-fit: cover !important;
+  }
+
+  .total-ship1 {
+    // background-color: #e3e6e6 !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    object-fit: cover;
+  
+  
+  img {
+    width: 80% !important;
+    // height: 220px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    object-fit: cover !important;
+  }
+  
+  .sign-in-activity {
+    background-color: #fff !important;
+    height: 100% !important;
+    padding: 25px !important;
+    margin-top: 20px !important;
+  }
+}
+  .sign-in-activity h3 {
+    font-size: 21px !important;
+    color: #0f1111 !important;
+  }
+  
+  .sign-in-activity button {
+    height: 30px !important;
+    width: 100% !important;
+    margin-top: 15px !important;
+    background-color: #ffd814 !important;
+    font-size: 13px !important;
+    border: 0 !important;
+    outline: 0 !important;
+    border-radius: 8px !important;
+  }
+}
+

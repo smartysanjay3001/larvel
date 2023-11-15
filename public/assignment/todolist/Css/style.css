@@ -1,0 +1,123 @@
+/* div{
+    
+    background-color: teal;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+    float: left;
+    display: none;
+}
+
+button{
+    padding: 10px;
+    background-color: aqua;
+    border: none;
+    border-radius:40px 10px;
+    box-shadow: 10px 10px 10px gray;
+
+} */
+/* button:hover{
+    box-shadow: inset 2px 5px 10px gray;
+} */
+* {
+  list-style: none;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: first baseline;
+  padding:70px 20px;
+  background: linear-gradient(95.5deg,rgba(173,253,234,1) 26.8%,rgba(192,229,246,1) 64%);
+}
+/* it's todo list strike out */
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  /* background-color: lightslategrey; */
+  width: 380px;
+  min-height: 350px;
+  border-radius: 40px;
+}
+h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: lightblue;
+  width: 100%;
+  padding: 18px 10px;
+  color: green;
+  font-size: 34px;
+  border-radius: 5px 5px 0 0;
+  font-weight:bolder;
+}
+h1 p{
+  color:#fff;
+  cursor: pointer;
+  font-size: 50px;
+  font-weight: bolder;
+}
+input {
+  width: 100%;
+  /* height: 40px; */
+  margin-top: 2px;
+  border: none;
+  border-radius: 2px;
+  padding: 15px 20px;
+  font-size: 24px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+ 
+}
+input:focus {
+  outline: none;
+}
+
+ul {
+  min-width: 100%;
+  font-size: 2rem;
+  box-sizing: border-box;
+  /* background-color: lightpink; */
+}
+
+li {
+ 
+  /* border: 1px solid gray; */
+  margin-top: 6px;
+  padding: 8px 10px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 800;
+}
+li:nth-child(odd){
+    background-color: lightgoldenrodyellow;
+}
+li:nth-child(even){
+    background-color:lightpink;
+}
+
+li:hover{
+    background-color: lightseagreen;
+
+}
+li span {
+  display: none;
+  color:red;
+  float: left;
+}
+li:hover span {
+  display: block;
+  width: 10px;
+}

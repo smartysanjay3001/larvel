@@ -1,0 +1,54 @@
+
+
+
+
+
+<div class="contaner-fluid vh-100 bg1">
+  <form class="container   border p-5  w-25 bg2" >
+    <div>
+      <a href="#!"  >Login</a>
+    </div>
+    <h1 class="text-white text-center ">Signup</h1>
+  <div class="form-group">
+ 
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="username" ng-model="Name">
+    
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" ng-model="Password">
+  </div>
+  
+  <div class="form-group">
+    <label for="phone">Phone Number</label>
+    <input type="tel" class="form-control  " id="phone" placeholder="Phone" ng-model="Phone">
+  </div>
+
+  <div class="form-group">
+    <label for="account">Account</label>
+    <input type="number" class="form-control  " id="account" placeholder="Account Number "  ng-model="Account">
+  </div>
+
+  <div class="form-group">
+    <label for="money">Amount</label>
+    <input type="number" class="form-control  " id="money" placeholder="Amount" ng-model="money">
+  </div>
+  
+  
+  <button type="submit" class="btn btn-primary m-2  " ng-click="signup()">Signup</button>
+
+
+  <div>
+    <p class="text-dark mt-2 text-bg-light p-3 " ng-show="upiid">UPI id: <span class="text-danger "> {{random}}</span> please copy this upi id</p>
+    <p class="text-bg-light text-primary mt-2 p-3 " ng-show="suc">{{show}}</p>
+    <p class="text-bg-light text-danger mt-2 p-3" ng-show="error">{{show1}}</p>
+   
+  </div>
+</form>
+</div>
+
+
+  
+

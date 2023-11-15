@@ -1,0 +1,103 @@
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* height: 100vh; */
+}
+.container1{
+	width: 100%;
+	/* min-height: 100vh; */
+	/* margin-top:40px; */
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	background:linear-gradient(120deg, #a1fdd0 0%,#c2e9fbef 100%);
+	justify-content: center;
+	
+	/* align-items: center; */
+}
+.vf{
+	box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.91),
+	           -6px -6px 5px rgba(255, 255, 255, 0.806),
+			   inset 10px 10px 5px rgba(128, 128, 128, 0.742),
+			   inset -10px -10px 5px rgba(255, 255, 255, 0.621);
+			   border-radius: 10px;
+			   background:linear-gradient(to top, #96fbc4 0%,#f9f586 100%);
+}
+.card img{
+  height: 240px;
+ /* min-width: 350px; */
+  
+  border-radius:50%;
+  margin: auto;
+  filter:drop-shadow(.3rem .2rem 1rem #e23);
+  /* object-fit: cover; */
+}
+#col1{
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+	gap: 20px;
+	/* place-items: center; */
+}
+.card1{
+	width: 260px;
+	height: 350px;
+	padding:0 20px;
+	cursor: pointer;
+	background:linear-gradient(to right,#9796f0,#fbc7d4);
+	color: white;
+}
+#myInput{
+	margin: auto;
+	width: 70%;
+	height: 50px;
+	padding:10px 40px;
+	border: none;
+	border-radius: 19px;
+}
+#myInput:focus{
+	outline: none;
+}
+.card1:hover{
+	box-shadow: 20px 20px 8px  gray,
+	           inset -10px -8px 8px #ffffff80;
+}
+#show{
+	/* background-color: blue; */
+	/* width: 10%; */
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	/* justify-content: center; */
+	padding: 30px;
+	color: white;
+	font-size: 30px;
+
+}
+#show div label {
+	display:block;
+}
+#show div input{
+	width: 100%;
+	border-radius: 10px;
+
+}
+button{
+	cursor: pointer;
+}
+#show div button:first-child{
+	color:white;
+	margin-top: 30px;
+	padding: 8px 50px;
+	border-radius: 10px;
+	background-color:lightblue;
+}
+#show div button:last-child{
+	color:white ;
+	background-color:lightseagreen;
+	padding: 8px 50px;
+	border-radius: 10px;
+}

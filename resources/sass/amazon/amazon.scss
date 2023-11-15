@@ -1,0 +1,28 @@
+
+@import 'variable';
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+   
+}
+body{
+    background-color: $amazon-bg;
+}
+
+
+
+@import 'navbar';
+
+@import 'cards';
+
+@import 'trending';
+
+@import 'search';
+@import 'admin';
+
+@import 'removecss';
+@import 'footer';
+@import 'mediaquery';
+

@@ -1,0 +1,154 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background: linear-gradient(90deg,#00c9ff 0%,#92fe9d 100%);
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding: 10px 5rem;
+	align-items:flex-start;
+}
+input:focus{
+	outline: none;
+}
+.blus{
+	display: flex;
+	/* background-color: red; */
+	padding: 30px;
+	width: 100%;
+	position: sticky;
+	top: 10px;
+
+}
+.blus input{
+	width: 50%;
+	padding: 10px 40px;
+	border: none;
+	font-size: 25px;
+	border-radius: 18px;
+	color:white;
+	background-color:rgba(128, 128, 128, 0.559);
+}
+.blus button{
+	margin-left:20px ;
+	background-color: green;
+	border-radius: 18px;
+	padding: 10px 50px;
+	color: white;
+	font-size: 22px;
+
+
+}
+.blus~p {
+	font-size: 30px;
+	padding: 20px;
+	margin-left: 20px;
+}
+
+.container2{
+	/* border: 1px solid blue; */
+	display: grid;
+	grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+	width: 100%;
+	padding: 40px;
+	gap: 10px;
+	
+
+}
+.container4{
+	/* border: 1px solid green; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	padding: 10px;
+	
+}
+.container4 input{
+	width: 70%;
+	padding: 8px 20px;
+	border-radius: 18px;
+}
+.container1{
+	/* border: 1px solid red; */
+	min-width: 100%;
+	padding: 10px;
+
+}
+.container4  h1{
+	margin-bottom: 40px;
+	color:darkorchid;
+	letter-spacing: 2px;
+}
+.container4 .buton{
+	display: flex;
+	gap: 30px;
+
+}
+.buton button:first-child{
+	color: white;
+	border: none;
+	border-radius: 18px;
+	background-color: green;
+}
+.buton button:last-child{
+	color: white;
+	border: none;
+	border-radius: 18px;
+	background-color: red	;
+}
+.container3{
+	
+	height:500px;
+	width: 400px;
+	overflow: auto;
+	border: 10px groove goldenrod;
+	/* padding: 20px 0 0 0; */
+	/* margin-bottom: 18rem; */
+}
+
+img{
+	height: 130px;
+	width: 150px;
+}
+.product1{
+	padding: 10px 0 0 0;
+	margin: auto;
+	display: flex;
+	flex-direction: column	;
+	gap: 30px;
+}
+
+.product{
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	gap: 10px;
+	/* border: 1px solid black; */
+	padding:10px 0px 10px 10px;
+
+}
+/* .buton{
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+} */
+.buton button{
+	padding: 10px 40px;
+}
+
+.show{
+	display: flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	padding:20px 40px;
+
+}

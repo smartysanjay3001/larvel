@@ -1,0 +1,59 @@
+<div class="bff">
+
+
+<div class="bgf">
+    <button class="btn " ng-click="login()">Login</button>
+    <button  class="btn " ng-click="signup()">Sign up</button>
+</div>
+
+<div class="container  bgf2" ng-show="signup1">
+ 
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  ng-model="email">
+            
+            </div>
+
+
+
+            <div class="mb-3">
+                <label for="exampleInputusername" class="form-label">User Name</label>
+                <input type="text" class="form-control" id="exampleInputusername"ng-model="Name" >
+              
+              </div>
+
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" ng-model="Password">
+            </div>
+           
+            <button type="submit" class="btn bff3" ng-click="sign()">Sign in</button>
+          </form>
+   
+</div>
+
+
+<!-- login -->
+
+<div class="container  bgf2" ng-show="login1">
+ 
+    <form>
+        
+        <div class="mb-3">
+            <label for="exampleInputusername1" class="form-label">User Name</label>
+            <input type="text" class="form-control" id="exampleInputusername1" ng-model="name">
+          
+          </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword" ng-model="pass">
+        </div>
+       
+        <button type="submit" class="btn bff2" ng-click="log()">Login</button>
+      </form>
+
+</div>
+
+</div>

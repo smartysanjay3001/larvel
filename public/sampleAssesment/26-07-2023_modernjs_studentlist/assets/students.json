@@ -1,0 +1,84 @@
+{
+	"students": [
+		{
+			"name": "Naruto",
+			"img":"./assets/images/naruto.jpg",
+			"id": "001",
+			"m1": 75,
+			"m2": 65,
+			"m3": 30,
+			"m4": 55,
+			"m5": 15
+		},
+		{
+			"name": "Hinata",
+			"img":"./assets/images/hinata.jpg",
+			"id": "002",
+			"m1": 75,
+			"m2": 65,
+			"m3": 55,
+			"m4": 75,
+			"m5": 55
+		},
+		{
+			"name": "Saskue",
+			"img":"./assets/images/saskue.jpg",
+			"id": "003",
+			"m1": 75,
+			"m2": 65,
+			"m3": 55,
+			"m4": 55,
+			"m5": 77
+		},
+		{
+			"name": "Kakashi",
+			"img":"./assets/images/kakshi.jpg",
+			"id": "004",
+			"m1": 75,
+			"m2": 65,
+			"m3": 55,
+			"m4": 56,
+			"m5": 55
+		},
+		{
+			"name": "sakura",
+			"img":"./assets/images/sakura.jpg",
+			"id": "005",
+			"m1": 75,
+			"m2": 65,
+			"m3": 87,
+			"m4": 55,
+			"m5": 89
+		},
+		{
+			"name": "Nobita",
+			"img":"./assets/images/nobita.jpg",
+			"id": "006",
+			"m1": 75,
+			"m2": 35,
+			"m3": 27,
+			"m4": 25,
+			"m5": 89
+		},
+		{
+			"name": "Jiraya",
+			"img":"./assets/images/jiraya.jpg",
+			"id": "007",
+			"m1": 75,
+			"m2": 65,
+			"m3": 87,
+			"m4": 55,
+			"m5": 89
+		},
+		{
+			"name": "Dekisuki",
+			"img":"./assets/images/dekisuki.jpg",
+			"id": "008",
+			"m1": 75,
+			"m2": 100,
+			"m3": 87,
+			"m4": 55,
+			"m5": 89
+		}
+	]
+}
