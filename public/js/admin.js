@@ -79479,6 +79479,7 @@ app.controller('HomeController', function ($scope) {
   homeCtrl.update = false;
   homeCtrl.category = false;
   homeCtrl.categorylist1 = false;
+  homeCtrl.using = true;
   homeCtrl.pro = false;
   homeCtrl.cat = true;
 
@@ -79495,6 +79496,7 @@ app.controller('HomeController', function ($scope) {
     homeCtrl.cat = true;
     homeCtrl.user = false;
     homeCtrl.catlist = false;
+    homeCtrl.using = true;
   };
   homeCtrl.Bevarage = function () {
     homeCtrl.update = false;
@@ -79502,12 +79504,14 @@ app.controller('HomeController', function ($scope) {
     homeCtrl.categorylist1 = false;
     homeCtrl.category1 = false;
     homeCtrl.addnew1 = true;
+    homeCtrl.using = true;
     homeCtrl.pro = false;
     homeCtrl.cat = true;
     homeCtrl.user = false;
     homeCtrl.catlist = false;
   };
   homeCtrl.category = function () {
+    homeCtrl.using = true;
     homeCtrl.update = false;
     homeCtrl.packagelist = false;
     homeCtrl.categorylist1 = false;
@@ -79519,6 +79523,7 @@ app.controller('HomeController', function ($scope) {
     homeCtrl.user = false;
   };
   homeCtrl.categorylist = function () {
+    homeCtrl.using = true;
     homeCtrl.update = false;
     homeCtrl.packagelist = false;
     homeCtrl.category1 = false;
@@ -79530,15 +79535,16 @@ app.controller('HomeController', function ($scope) {
     homeCtrl.user = false;
   };
   homeCtrl.approve = function ($id, $status, event) {
-    if ($status == 1) {
-      $val = 0;
-    } else {
+    if ($status == 0) {
       $val = 1;
+    } else {
+      $val = 0;
     }
     data = {
       id: $id,
       product_status: $val
     };
+    console.log(data);
     $.ajax({
       headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -79549,9 +79555,11 @@ app.controller('HomeController', function ($scope) {
       dataType: 'json',
       success: function success(result) {
         if (result == 0) {
+          event.target.classList.remove('red');
           $(event.target).html('Approve');
           event.target.classList.add('green');
         } else {
+          event.target.classList.remove('green');
           $(event.target).html('DisApprove');
           event.target.classList.add('red');
         }
@@ -79611,6 +79619,7 @@ app.controller('HomeController', function ($scope) {
     homeCtrl.pro = true;
     homeCtrl.cat = true;
     homeCtrl.catlist = false;
+    homeCtrl.using = false;
   };
   homeCtrl.admin = function ($id, $status, event) {
     if ($status == 1) {
@@ -79632,9 +79641,11 @@ app.controller('HomeController', function ($scope) {
       dataType: 'json',
       success: function success(result) {
         if (result == 0) {
+          event.target.classList.remove('red');
           $(event.target).html('Make Admin');
           event.target.classList.add('green');
         } else {
+          event.target.classList.remove('green');
           $(event.target).html('Dismiss as admin');
           event.target.classList.add('red');
         }
