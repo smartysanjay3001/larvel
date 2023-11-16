@@ -20,7 +20,7 @@ class AdminController extends Controller
 
     $category = Category::all();
     $products = Products::latest()->paginate(15);
-    $user = User::paginate(10);
+    $user = User::where('id', '<>', auth()->user()->id)->paginate(10);
     return view('amazon.admin.admin', [
       'category' => $category,
       "products" => $products,
@@ -74,14 +74,24 @@ class AdminController extends Controller
   public function approve(Request $request)
   {
 
-    Products::where('id', $request->id)->update(['product_status' => $request->product_status]);
+
+
     $cart1 = Products::where('id', $request->id)->pluck('product_status');
-
     foreach ($cart1 as $val) {
-      $status = $val;
+      if ($val == 0) {
+        $status = 1;
+      } else {
+        $status = 0;
+      }
     }
+    Products::where('id', $request->id)->update(['product_status' => $status]);
 
-    return response()->json($status);
+
+    $cart2 = Products::where('id', $request->id)->pluck('product_status');
+    foreach ($cart2 as $car) {
+      $key = $car;
+    }
+    return response()->json($key);
   }
 
   public function edit(Request $request)
@@ -97,15 +107,15 @@ class AdminController extends Controller
 
   public function update(Request $request)
   {
-    // $attributess = request()->validate([
-    //   'category_id' => ['required'],
-    //   'product_title' => ['string', 'required'],
-    //   'product_name' => ['string', 'required'],
-    //   'product_image' => ['required'],
-    //   'product_description' => ['string', 'required'],
-    //   'product_price' => ['string', 'required'],
-    //   'products_qty' => ['required']
-    // ]);
+    $attributess = request()->validate([
+      'category_id' => ['required'],
+      'product_title' => ['string', 'required'],
+      'product_name' => ['string', 'required'],
+      'product_image' => ['required'],
+      'product_description' => ['string', 'required'],
+      'product_price' => ['string', 'required'],
+      'products_qty' => ['required']
+    ]);
     // dd(request()->all());
     if (request('product_image')) {
       $imageName = time() . '.' . $request->product_image->extension();
@@ -120,19 +130,19 @@ class AdminController extends Controller
       'category_id' => $request->category_id,
       'product_title' => $request->product_title,
       'product_name' => $request->product_name,
-      'product_image' =>   $imageName ,
-      'product_description' =>$request->product_description,
+      'product_image' =>   $imageName,
+      'product_description' => $request->product_description,
       'product_price' => $request->product_price,
-      'products_qty' =>$request->products_qty
+      'products_qty' => $request->products_qty
 
     ]);
     return redirect()->route('amz_admin');
   }
   public function delete(Request $request)
   {
-  
+
     $cart1 = Products::where('id', $request->id)->first();
-    $image="./images/amazon/$cart1->product_image";
+    $image = "./images/amazon/$cart1->product_image";
     unlink($image);
 
 
@@ -228,17 +238,25 @@ class AdminController extends Controller
   }
 
 
-  public function admin(Request $request){
-               
-    User::where('id',$request->id)->update(['is_admin'=>$request->is_admin]);
-   $cart1= User::where('id',$request->id)->pluck('is_admin');
-  
-    foreach($cart1 as $val){
-         $status=$val;
+  public function admin(Request $request)
+  {
+
+
+    $cart1 = User::where('id', $request->id)->pluck('is_admin');
+    foreach ($cart1 as $val) {
+      if ($val == 0) {
+        $status = 1;
+      } else {
+        $status = 0;
+      }
     }
-    
-    return response()->json($status);
-   
+    User::where('id', $request->id)->update(['is_admin' => $status]);
+    $cart2 = User::where('id', $request->id)->pluck('is_admin');
+
+    foreach ($cart2 as $car) {
+      $key = $car;
     }
 
+    return response()->json($key);
+  }
 }
