@@ -188,7 +188,7 @@ class AdminController extends Controller
 
     if ($categories == 'All') {
       if (isset($search)) {
-        $products = Products::where('product_name', 'like', "%{$search}%")->orWhere('category_name', 'like', "%{$search}%")->orWhere('product_title', 'like', "%{$search}%")->paginate(15);
+        $products=Products::join('amz_categories','amz_categories.id','=','amz_products.category_id')->where('product_status',1)->where('product_name','like',"%{$search}%")->orWhere('product_title','like',"%{$search}%")->orwhere('amz_categories.categories','like',"%{$search}%")->paginate(15);
 
 
         return view('amazon.admin.adminsearch', [
@@ -209,7 +209,25 @@ class AdminController extends Controller
 
         ]);
       }
-    } else if ($categories) {
+    }
+    else if($categories && $search){
+      $products= Products::join('amz_categories','amz_categories.id','=','amz_products.category_id')->where([['product_name','like',"%{$search}%"],['amz_categories.id','=',"$categories"]])->orwhere('amz_categories.categories','like',"%{$search}%")->paginate(15);
+    
+          
+      return view('amazon.amazonsearch',[
+        'category'=>$category,
+        'product'=> $products,
+        "user"=>auth()->user(),
+      
+    
+      ])->withSearch($search);
+    
+    
+    
+    }
+    
+    
+    else if ($categories) {
       $products = Products::where('category_id', $categories)->paginate(15);
 
 
@@ -225,8 +243,8 @@ class AdminController extends Controller
 
 
 
-        $products = Products::where([['product_name', 'like', "%{$search}%"], ['category_id', $categories]])->orWhere([['product_title', 'like', "%{$search}%"], ['category_id', $categories]])->orWhere('category_name', 'like', "%{$search}%")->paginate(8);
-
+        $products=Products::join('amz_categories','amz_categories.id','=','amz_products.category_id')->where('product_status',1)->where([['product_name','like',"%{$search}%"],['category_id',$categories]])->orWhere([['product_title','like',"%{$search}%"],['category_id',$categories]])->paginate(8);
+        
         return view('amazon.admin.adminsearch', [
           'category' => $category,
           'products' => $products,

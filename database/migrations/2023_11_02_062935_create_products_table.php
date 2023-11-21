@@ -16,8 +16,7 @@ class CreateProductsTable extends Migration
         Schema::create('amz_products', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('category_id');
-            $table->string('product_title');
-            $table->string('category_id');
+            $table->string('product_title');    
             $table->string('product_name');
             $table->text('product_image');
             $table->text('product_description');

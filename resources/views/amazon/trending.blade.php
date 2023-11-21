@@ -18,7 +18,7 @@
                <a href="{{ route('amz_productlist',$order1->id) }}"><img src="{{ asset("images/amazon/$order1->product_image") }}"></a> 
             </div>
             <div class="discount">
-                <p>10% off</p>
+                <p>{{ round(($order1->product_price /$order1->product_priceoriginal)*100 ) }}% off</p>
                 <span>Deal</span>
             </div>
 

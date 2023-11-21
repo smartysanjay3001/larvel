@@ -16,7 +16,7 @@ class CategoryController extends Controller
 {
  
   public function search(Request $request){
-    session(['register'=>$request->path()]);
+    session(['register'=>$request->url()]);
    $search=$request->input('search');
    $categories=$request->input('category');
    session(['search'=>$search]);
@@ -34,7 +34,7 @@ class CategoryController extends Controller
    
      if($categories == 'All'){
       if(isset($search)){
-        $products=Products::where('product_status',1)->where('product_name','like',"%{$search}%")->orWhere('category_name','like',"%{$search}%")->orWhere('product_title','like',"%{$search}%")->paginate(15);
+        $products=Products::join('amz_categories','amz_categories.id','=','amz_products.category_id')->where('product_status',1)->where('product_name','like',"%{$search}%")->orWhere('product_title','like',"%{$search}%")->orwhere('amz_categories.categories','like',"%{$search}%")->paginate(15);
       
     
         return view('amazon.amazonsearch',[
@@ -62,7 +62,21 @@ class CategoryController extends Controller
       }
      
      }
+else if($categories && $search){
+  $products= Products::join('amz_categories','amz_categories.id','=','amz_products.category_id')->where([['product_name','like',"%{$search}%"],['amz_categories.id','=',"$categories"]])->orwhere('amz_categories.categories','like',"%{$search}%")->paginate(15);
 
+      
+  return view('amazon.amazonsearch',[
+    'category'=>$category,
+    'product'=> $products,
+    "user"=>auth()->user(),
+    'cart2'=> $cart1
+
+  ])->withSearch($search);
+
+
+
+}
 
      else if($categories) {
       $products=Products::where('product_status',1)->where('category_id',$categories)->paginate(15);
@@ -82,7 +96,7 @@ class CategoryController extends Controller
 
      
     
-        $products=Products::where('product_status',1)->where([['product_name','like',"%{$search}%"],['category_id',$categories]])->orWhere([['product_title','like',"%{$search}%"],['category_id',$categories]])->orWhere('category_name','like',"%{$search}%")->paginate(8);
+        $products=Products::join('amz_categories','amz_categories.id','=','amz_products.category_id')->where('product_status',1)->where([['product_name','like',"%{$search}%"],['category_id',$categories]])->orWhere([['product_title','like',"%{$search}%"],['category_id',$categories]])->paginate(8);
 
         return view('amazon.amazonsearch',[
           'category'=>$category,

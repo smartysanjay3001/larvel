@@ -79645,7 +79645,7 @@ app.controller('CartBuyController', function ($scope) {
       success: function success(result) {
         if (result) {
           event.target.parentNode.parentNode.parentNode.parentNode.classList.add('remove');
-          window.location.href = '/amazon/cart/order';
+          window.location.href = '/amazon/cart/buy/show';
         }
       }
     });

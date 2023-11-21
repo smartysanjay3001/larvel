@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 class CartController extends Controller
 {
     public function cart(Request $request){
-      session(['register'=>$request->path()]);
+      session(['register'=>$request->url()]);
         $category=Category::all();
         $products= Products::all();
         
@@ -127,4 +127,7 @@ class CartController extends Controller
         return response()->json($products);
         
       }
+
+
+      
 }

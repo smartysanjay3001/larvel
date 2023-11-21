@@ -49,7 +49,7 @@
 
                 <div class="container">
                     <div class="d-flex gap-1   ">
-                        <span class="fs-5 text-danger ">-11%</span>
+                        <span class="fs-5 text-danger ">-{{ round(($products->product_price/$products->product_priceoriginal)*100) }}%</span>
                         <h3> <sup class="fs-6">₹</sup>{{ $products->product_price }} </h3>
                     </div>
                     <span class="text-secondary" style="font-size: 13px">M.R.P.: <span class="text-decoration-line-through">₹{{ $products->product_priceoriginal  }}</span></span>
@@ -123,8 +123,8 @@
                            
                                 
                             @else
-                            <a href="{{ route('login') }}" class="btn  rounded-pill" style="background: #ffd814;" >Add to Cart</a>
-                            <a href="{{ route('login') }}" class="btn  rounded-pill" style="background: #ffa41c;" >Buy Now</a>
+                            <a href="{{ route('register') }}" class="btn  rounded-pill" style="background: #ffd814;" >Add to Cart</a>
+                            <a href="{{ route('register') }}" class="btn  rounded-pill" style="background: #ffa41c;" >Buy Now</a>
                                 
                             @endif
 

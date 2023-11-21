@@ -12,7 +12,7 @@ class ProductsController extends Controller
 
 
     public function oneproductlist(Request $request){
-      session(['register'=>$request->path()]);
+      session(['register'=>$request->url()]);
         $category=Category::all();
         $products= Products::find(['id'=>$request->id])->first();
       if(auth()->user()){

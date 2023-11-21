@@ -51,8 +51,8 @@
             
 
             <div class="share">
-                <a href="https://www.linkedin.com/in/sanjay-kumar-a7a162176" class="fab fa-linkedin" target="_blank"></a>
-                <a href="#" class="fab fa-facebook-f"></a>
+                {{-- <a href="https://www.linkedin.com/in/sanjay-kumar-a7a162176" class="fab fa-linkedin" target="_blank"></a> --}}
+                {{-- <a href="#" class="fab fa-facebook-f"></a> --}}
                 <a href="/tweety" class="fab fa-twitter"></a>
                 <a href="/amazon/home" class="fab fa-amazon"></a>
                 

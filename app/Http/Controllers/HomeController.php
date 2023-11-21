@@ -31,7 +31,7 @@ class HomeController extends Controller
      
     public function index(Request $request)
     {
-        session(['register'=>$request->path()]);
+        session(['register'=>$request->url()]);
         $category=Category::all();
        $products= Products::all();
     
